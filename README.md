@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://graphql.org/" target="_blank"><img src="https://graphql.org/img/logo.svg" width="200" alt="GraphQL Logo"></a>
-  <h1>GraphQL as Microservice</h1>
-  <p>"GraphQL as Microservice" is a project aimed at creating a modular GraphQL server architecture, deployed as a microservice, to seamlessly connect with various frontend applications. By dockerizing both the GraphQL server and the frontend applications, the project ensures portability and scalability. Utilizing AWS EC2 for deployment provides a reliable and scalable infrastructure. This setup allows for efficient development, easy integration with different frontend technologies, and robust deployment options for scalable applications.</p>
+  <h1>Lotto Project</h1>
+  <p>"This Lotto project aims to display statistics about numbers in the New Zealand lottery game. It will present numbers and statistics obtained from Google Colab, and display them on both web and mobile applications. The app is designed to be updated every time a game is played, ensuring that the data and statistics remain current.</p>
 </div>
 
 
