@@ -1,6 +1,5 @@
 <div align="center">
   <a href="https://graphql.org/" target="_blank"><img src="https://graphql.org/img/logo.svg" width="200" alt="GraphQL Logo"></a>
-  <a href="https://www.apollographql.com/" target="_blank"><img src="https://global.discourse-cdn.com/business5/uploads/apollographql/original/1X/25bd5104d61020fe4dc0777a5919cd009bca633e.png" width="200" alt="Apollo Logo"></a>
   <h1>GraphQL as Microservice</h1>
   <p>"GraphQL as Microservice" is a project aimed at creating a modular GraphQL server architecture, deployed as a microservice, to seamlessly connect with various frontend applications. By dockerizing both the GraphQL server and the frontend applications, the project ensures portability and scalability. Utilizing AWS EC2 for deployment provides a reliable and scalable infrastructure. This setup allows for efficient development, easy integration with different frontend technologies, and robust deployment options for scalable applications.</p>
 </div>
