@@ -20,7 +20,7 @@
 
 <h2 id="installation">Installation</h2>
 <p>To get started, clone this repository to your local machine:</p>
-<pre><code class="language-bash">[git clone https://github.com/your_username/project_name.git](https://github.com/diiaz2910/lotto.git)
+<pre><code class="language-bash">[git clone https://github.com/diiaz2910/lotto.git](https://github.com/diiaz2910/lotto.git)
 </code></pre>
 <p>Then, install the dependencies using npm:</p>
 <pre><code class="language-bash">npm install
