@@ -12,12 +12,6 @@
   <a href="https://www.npmjs.com/package/graphql"><img src="https://img.shields.io/npm/l/graphql" alt="License"></a>
 </p>
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/@apollo/client"><img src="https://img.shields.io/npm/dt/@apollo/client" alt="Total NPM Downloads"></a>
-  <a href="https://www.npmjs.com/package/@apollo/client"><img src="https://img.shields.io/npm/v/@apollo/client" alt="Latest Stable Version"></a>
-  <a href="https://www.npmjs.com/package/@apollo/client"><img src="https://img.shields.io/npm/l/@apollo/client" alt="License"></a>
-</p>
-
 
 <h2 id="installation">Installation</h2>
 <p>To get started, clone this repository to your local machine:</p>
