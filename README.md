@@ -29,7 +29,7 @@
 <p>To run the project locally, use the following command:</p>
 <pre><code class="language-bash">npm run dev
 </code></pre>
-<p>This will start the application in development mode. Open <a href="http://localhost:4500/playground">http://localhost:4000</a> to view it in your browser.</p>
+<p>This will start the application in development mode. Open <a href="http://localhost:4500/playground">http://localhost:4500</a> to view it in your browser.</p>
 <h2 id="contribution">Contribution</h2>
 <p>If you want to contribute to this project, follow these steps:</p>
 <ul>
