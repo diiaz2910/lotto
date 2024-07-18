@@ -19,16 +19,21 @@ const resolversLotto: IResolvers = {
   Mutation: {
     async createCombination(root: void, args: any, context: { db: Db }) {
       try {
-        const regexp = new RegExp(args.combination.numbers, "i");
+        // Sort numbers before no duplication is allowed
+        const sortedNumbers = [...args.combination.numbers].sort(
+          (a, b) => a - b
+        );
+
         const exist = await context.db
           .collection(LOTTO_COLLECTION)
-          .findOne({ combination: regexp });
+          .findOne({ numbers: sortedNumbers });
         if (exist) {
           return "Combination already exists";
         }
+        // Saving the combination in the database with the sorted numbers
         await context.db
           .collection(LOTTO_COLLECTION)
-          .insertOne(args.combination);
+          .insertOne({ numbers: sortedNumbers });
       } catch (error) {}
       return "Combination created successfully";
     },
