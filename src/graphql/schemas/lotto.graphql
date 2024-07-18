@@ -4,6 +4,7 @@ type Query {
 
 type Mutation {
   createCombination(combination: newCombinationInput): String
+  updateCombinations(combination: updateCombinationInput): String
 }
 
 type Combination {
@@ -12,5 +13,10 @@ type Combination {
 }
 
 input newCombinationInput {
+  numbers: [Int]
+}
+
+input updateCombinationInput {
+  _id: ID
   numbers: [Int]
 }
