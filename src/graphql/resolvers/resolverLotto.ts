@@ -22,7 +22,7 @@ const resolversLotto: IResolvers = {
         const regexp = new RegExp(args.combination.numbers, "i");
         const exist = await context.db
           .collection(LOTTO_COLLECTION)
-          .findOne({ numbers: { $eq: args.combinations.numbers } });
+          .findOne({ combination: regexp });
         if (exist) {
           return "Combination already exists";
         }
