@@ -58,6 +58,21 @@ const resolversLotto: IResolvers = {
         console.log(error);
       }
     },
+    async deleteCombination(root: void, args: any, context: { db: Db }) {
+      try {
+        const { _id } = args;
+        const result = await context.db
+          .collection(LOTTO_COLLECTION)
+          .deleteOne({ _id: ObjectId.createFromHexString(_id) });
+        if (result.deletedCount > 0) {
+          return "Combination deleted successfully";
+        } else {
+          return "Combination not found";
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 

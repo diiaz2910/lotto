@@ -5,6 +5,7 @@ type Query {
 type Mutation {
   createCombination(combination: newCombinationInput): String
   updateCombinations(combination: updateCombinationInput): String
+  deleteCombination(_id: ID): String
 }
 
 type Combination {
