@@ -19,10 +19,18 @@ const resolversLotto: IResolvers = {
   Mutation: {
     async createCombination(root: void, args: any, context: { db: Db }) {
       try {
-        // Sort numbers before duplication is not allowed
+        // Sort numbers before, duplication is not allowed
         const sortedNumbers = [...args.combination.numbers].sort(
           (a, b) => a - b
         );
+
+        // Validation. Numbers must be between 1 and 40 and must be 6 numbers
+        if (
+          sortedNumbers.some((num) => num < 1 || num > 40) ||
+          new Set(sortedNumbers).size !== 6
+        ) {
+          return "Invalid numbers";
+        }
 
         const exist = await context.db
           .collection(LOTTO_COLLECTION)
