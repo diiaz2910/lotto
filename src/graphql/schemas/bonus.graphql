@@ -1,3 +1,23 @@
 type Query {
-  _empty: String
+  getBonuses: [Bonus]
+}
+
+type Mutation {
+  createBonus(bonus: newBonusInput): String
+  updateBonus(bonus: updateBonusInput): String
+  deleteBonus(_id: ID): String
+}
+
+type Bonus {
+  _id: ID
+  numbers: [Int]
+}
+
+input newBonusInput {
+  numbers: [Int]
+}
+
+input updateBonusInput {
+  _id: ID
+  numbers: [Int]
 }

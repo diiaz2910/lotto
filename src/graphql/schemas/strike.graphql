@@ -1,3 +1,23 @@
 type Query {
-  _empty: String
+  getStrikes: [Strike]
+}
+
+type Mutation {
+  createStrike(strike: newStrikeInput): String
+  updateStrike(strike: updateStrikeInput): String
+  deleteStrike(_id: ID): String
+}
+
+type Strike {
+  _id: ID
+  numbers: [Int]
+}
+
+input newStrikeInput {
+  numbers: [Int]
+}
+
+input updateStrikeInput {
+  _id: ID
+  numbers: [Int]
 }

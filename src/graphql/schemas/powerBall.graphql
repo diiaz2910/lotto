@@ -1,3 +1,23 @@
 type Query {
-  _empty: String
+  getPowerBalls: [PowerBall]
+}
+
+type Mutation {
+  createPowerBall(powerBall: newPowerBallInput): String
+  updatePowerBall(powerBall: updatePowerBallInput): String
+  deletePowerBall(_id: ID): String
+}
+
+type PowerBall {
+  _id: ID
+  numbers: [Int]
+}
+
+input newPowerBallInput {
+  numbers: [Int]
+}
+
+input updatePowerBallInput {
+  _id: ID
+  numbers: [Int]
 }
