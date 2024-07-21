@@ -1,6 +1,5 @@
 type Query {
-  _empty: String
-  # getBonuses: [Bonus]
+  getBonuses: [Bonus]
 }
 
 type Mutation {
