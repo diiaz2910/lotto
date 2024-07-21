@@ -1,6 +1,5 @@
 type Query {
-  _empty: String
-  #getStrikes: [Strike]
+  getStrikes: [Strike]
 }
 
 type Mutation {
