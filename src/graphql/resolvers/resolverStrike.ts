@@ -6,9 +6,16 @@ import { STRIKE_COLLECTION } from "../../mongo/collections";
 
 const resolversStrike: IResolvers = {
   Query: {
-    async getStrikes(root: void, args: any, context: { db: Db }) {
+    async getStrikes(
+      root: void,
+      args: { numbers: number[] },
+      context: { db: Db }
+    ) {
       try {
-        return await context.db.collection(STRIKE_COLLECTION).find().toArray();
+        return await context.db
+          .collection(STRIKE_COLLECTION)
+          .find({ numbers: { $all: args.numbers } })
+          .toArray();
       } catch (error) {
         console.log(error);
         throw error;

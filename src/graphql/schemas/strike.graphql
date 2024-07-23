@@ -1,5 +1,6 @@
 type Query {
-  getStrikes: [Strike]
+  #getStrikes: [Strike]
+  getStrikes(numbers: [Int]): [Strike]
 }
 
 type Mutation {

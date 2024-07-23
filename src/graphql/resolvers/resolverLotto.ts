@@ -6,9 +6,20 @@ import { LOTTO_COLLECTION } from "../../mongo/collections";
 
 const resolversLotto: IResolvers = {
   Query: {
-    async getCombinations(root: void, args: any, context: { db: Db }) {
+    async getCombinations(
+      root: void,
+      args: { numbers?: number[] },
+      context: { db: Db }
+    ) {
       try {
-        return await context.db.collection(LOTTO_COLLECTION).find().toArray();
+        let query = {};
+        if (args.numbers) {
+          query = { numbers: { $all: args.numbers } };
+        }
+        return await context.db
+          .collection(LOTTO_COLLECTION)
+          .find(query)
+          .toArray();
       } catch (error) {
         console.error(error);
         throw error; // Re-throw the error so it can be handled further up
