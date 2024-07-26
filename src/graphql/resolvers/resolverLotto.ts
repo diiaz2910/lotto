@@ -25,6 +25,16 @@ const resolversLotto: IResolvers = {
         throw error; // Re-throw the error so it can be handled further up
       }
     },
+    async getLastCombination(root: void, args: any, context: { db: Db }) {
+      try {
+        return await context.db
+          .collection(LOTTO_COLLECTION)
+          .findOne({}, { sort: { index: -1 } });
+      } catch (error) {
+        console.log(error);
+        throw error;
+      }
+    },
   },
   Mutation: {
     async createCombination(root: void, args: any, context: { db: Db }) {

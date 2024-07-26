@@ -1,5 +1,6 @@
 type Query {
   getCombinations(numbers: [Int!]): [Combination]
+  getLastCombination: Combination
 }
 
 type Mutation {
