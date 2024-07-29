@@ -6,6 +6,7 @@ import { LOTTO_COLLECTION } from "../../mongo/collections";
 
 const resolversLotto: IResolvers = {
   Query: {
+    // get all combinations
     async getCombinations(
       root: void,
       args: { numbers?: number[] },
@@ -25,6 +26,7 @@ const resolversLotto: IResolvers = {
         throw error; // Re-throw the error so it can be handled further up
       }
     },
+    // get the last combination
     async getLastCombination(root: void, args: any, context: { db: Db }) {
       try {
         return await context.db
@@ -36,6 +38,7 @@ const resolversLotto: IResolvers = {
       }
     },
   },
+  // create a new combination
   Mutation: {
     async createCombination(root: void, args: any, context: { db: Db }) {
       try {
@@ -58,27 +61,35 @@ const resolversLotto: IResolvers = {
         if (exist) {
           throw new Error("Combination already exists");
         }
+
+        // finding the highest index and increment it by 1
+        const highestIndex = await context.db
+          .collection(LOTTO_COLLECTION)
+          .findOne({}, { sort: { index: -1 } });
+        const newIndex = highestIndex ? highestIndex.index + 1 : 1;
+
         // Saving the combination in the database with numbers sorted
         await context.db
           .collection(LOTTO_COLLECTION)
-          .insertOne({ numbers: sortedNumbers });
+          .insertOne({ numbers: sortedNumbers, index: newIndex });
         return "Combination created successfully";
       } catch (error) {
         console.error(error);
         throw error; // Re-throw the error so it can be handled further up
       }
     },
+    // update a combination
     async updateCombinations(root: void, args: any, context: { db: Db }) {
       try {
         const { _id, ...fieldsToUpdate } = args.combination;
 
-        // Validate numbers and sort them
+        // validate numbers and sort them
         if (fieldsToUpdate.numbers) {
           const sortedNumbers = [...fieldsToUpdate.numbers].sort(
             (a, b) => a - b
           );
 
-          // Validation. Numbers must be between 1 and 40 and must be 6 numbers
+          // validation. Numbers must be between 1 and 40 and must be 6 numbers
           if (
             sortedNumbers.some((num) => num < 1 || num > 40) ||
             new Set(sortedNumbers).size !== 6
@@ -86,7 +97,7 @@ const resolversLotto: IResolvers = {
             throw new Error("Invalid numbers");
           }
 
-          // Check if combination already exists
+          // check if combination already exists
           const exist = await context.db
             .collection(LOTTO_COLLECTION)
             .findOne({ numbers: sortedNumbers });
@@ -94,7 +105,7 @@ const resolversLotto: IResolvers = {
             throw new Error("Combination already exists");
           }
 
-          // Update numbers with sorted numbers
+          // update numbers with sorted numbers
           fieldsToUpdate.numbers = sortedNumbers;
         }
 
@@ -114,7 +125,7 @@ const resolversLotto: IResolvers = {
         }
       } catch (error) {
         console.error(error);
-        throw error; // Re-throw the error so it can be handled further up
+        throw error; // re-throw the error so it can be handled further up
       }
     },
     async deleteCombination(root: void, args: any, context: { db: Db }) {
@@ -130,7 +141,7 @@ const resolversLotto: IResolvers = {
         }
       } catch (error) {
         console.error(error);
-        throw error; // Re-throw the error so it can be handled further up
+        throw error; // re-throw the error so it can be handled further up
       }
     },
   },
