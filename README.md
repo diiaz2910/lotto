@@ -1,5 +1,6 @@
 <div align="center">
   <a href="https://graphql.org/" target="_blank"><img src="https://graphql.org/img/logo.svg" width="200" alt="GraphQL Logo"></a>
+  <img src="https://raw.githubusercontent.com/diiaz2910/assets-repo/master/png-transparent-google-colab-logo-tech-companies-removebg-preview.png?token=GHSAT0AAAAAACURK25GF5VZA5FMCEB7N6HKZVI3D4A" width="300">
   <a href="https://reactjs.org" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="200" alt="React Logo"></a>
   <h1>Lotto Project</h1>
   <p>" This Lotto project aims to display statistics about numbers in the New Zealand lottery game. It will present numbers and statistics obtained from Google Colab, and display them on both web and mobile applications. The app is designed to be updated every time a game is played, ensuring that the data and statistics remain current.</p>
