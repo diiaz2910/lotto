@@ -6,6 +6,7 @@ import { POWERBALL_COLLECTION } from "../../mongo/collections";
 
 const resolversPowerBall: IResolvers = {
   Query: {
+    // get all powerballs
     async getPowerBalls(root: void, args: any, context: { db: Db }) {
       try {
         return await context.db
