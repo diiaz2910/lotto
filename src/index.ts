@@ -1,7 +1,7 @@
 import { ApolloServer } from "@apollo/server";
+import { expressMiddleware } from "@apollo/server/express4";
 import express from "express";
 import cors from "cors";
-import { expressMiddleware } from "@apollo/server/express4";
 import schema from "./graphql";
 import MongoLib from "./mongo";
 import config from "./config";

@@ -1,0 +1,13 @@
+type Chart {
+  _id: ID!
+  imageUrl: String!
+  description: String!
+}
+
+type Query {
+  getCharts: [Chart!]!
+}
+
+type Mutation {
+  addChart(imageUrl: String!, description: String!): Chart!
+}
