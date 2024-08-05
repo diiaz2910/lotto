@@ -2,12 +2,14 @@ type Chart {
   _id: ID!
   imageUrl: String!
   description: String!
+  index: Int!
 }
 
 type Query {
   getCharts: [Chart!]!
+  getChart(index: Int!): Chart
 }
 
 type Mutation {
-  addChart(imageUrl: String!, description: String!): Chart!
+  addChart(imageUrl: String!, description: String!, index: Int): Chart!
 }

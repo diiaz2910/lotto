@@ -18,14 +18,14 @@ const resolversChart: IResolvers = {
   Mutation: {
     async addChart(
       root: void,
-      args: { imageUrl: string; description: string },
+      args: { imageUrl: string; description: string; index: number },
       context: { db: Db }
     ) {
       try {
         const { imageUrl, description } = args;
         const result = await context.db
           .collection(CHART_COLLECTION)
-          .insertOne({ imageUrl, description });
+          .insertOne({ imageUrl, description, index: 0 });
 
         const newChart = await context.db
           .collection(CHART_COLLECTION)
