@@ -66,6 +66,8 @@ const resolversLotto: IResolvers = {
         const highestIndex = await context.db
           .collection(LOTTO_COLLECTION)
           .findOne({}, { sort: { index: -1 } });
+
+        // incrementing the index
         const newIndex = highestIndex ? highestIndex.index + 1 : 1;
 
         // Saving the combination in the database with numbers sorted

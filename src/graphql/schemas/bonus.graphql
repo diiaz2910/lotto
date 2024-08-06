@@ -1,5 +1,6 @@
 type Query {
   getBonuses: [Bonus]
+  getLastBonus: Bonus
 }
 
 type Mutation {
@@ -10,6 +11,7 @@ type Mutation {
 
 type Bonus {
   _id: ID
+  index: Int
   numbers: [Int]
 }
 
