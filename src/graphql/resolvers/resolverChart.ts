@@ -14,6 +14,16 @@ const resolversChart: IResolvers = {
         throw error;
       }
     },
+    async getLastChart(root: void, args: any, context: { db: Db }) {
+      try {
+        return await context.db
+          .collection(CHART_COLLECTION)
+          .findOne({}, { sort: { index: -1 } });
+      } catch (error) {
+        console.error(error);
+        throw error;
+      }
+    },
   },
   Mutation: {
     async addChart(

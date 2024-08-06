@@ -3,11 +3,13 @@ type Chart {
   imageUrl: String!
   description: String!
   index: Int!
+  getLastChart: Chart
 }
 
 type Query {
   getCharts: [Chart!]!
   getChart(index: Int!): Chart
+  getLastChart: Chart
 }
 
 type Mutation {

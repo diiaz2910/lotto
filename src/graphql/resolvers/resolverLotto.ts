@@ -33,7 +33,7 @@ const resolversLotto: IResolvers = {
           .collection(LOTTO_COLLECTION)
           .findOne({}, { sort: { index: -1 } });
       } catch (error) {
-        console.log(error);
+        console.error(error);
         throw error;
       }
     },
@@ -94,7 +94,7 @@ const resolversLotto: IResolvers = {
             sortedNumbers.some((num) => num < 1 || num > 40) ||
             new Set(sortedNumbers).size !== 6
           ) {
-            throw new Error("Invalid numbers");
+            throw Error("Invalid numbers");
           }
 
           // check if combination already exists
