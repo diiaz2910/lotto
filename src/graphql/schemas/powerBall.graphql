@@ -1,5 +1,6 @@
 type Query {
   getPowerBalls: [PowerBall]
+  getLastPowerBall: PowerBall
 }
 
 type Mutation {
@@ -11,6 +12,7 @@ type Mutation {
 type PowerBall {
   _id: ID
   numbers: [Int]
+  index: Int
 }
 
 input newPowerBallInput {
