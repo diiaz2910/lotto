@@ -1,6 +1,6 @@
 type Query {
-  #getStrikes: [Strike]
   getStrikes(numbers: [Int]): [Strike]
+  getLastStrike: Strike
 }
 
 type Mutation {
@@ -12,6 +12,7 @@ type Mutation {
 type Strike {
   _id: ID
   numbers: [Int]
+  index: Int
 }
 
 input newStrikeInput {

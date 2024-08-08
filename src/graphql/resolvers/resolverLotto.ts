@@ -55,6 +55,7 @@ const resolversLotto: IResolvers = {
           throw new Error("Invalid numbers");
         }
 
+        // Check if combination already exists
         const exist = await context.db
           .collection(LOTTO_COLLECTION)
           .findOne({ numbers: sortedNumbers });
