@@ -4,10 +4,15 @@ import express from "express";
 import cors from "cors";
 import schema from "./graphql";
 import MongoLib from "./mongo";
-import config from "./config";
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://lotto-of5dem1gc-ricardos-projects-464c8317.vercel.app/api",
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 
 const server = new ApolloServer({
   schema,
