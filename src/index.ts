@@ -7,10 +7,9 @@ import MongoLib from "./mongo";
 
 const app = express();
 
-// CORS Config to allow requests from any origin
 app.use(
   cors({
-    origin: "https://lotto-of5dem1gc-ricardos-projects-464c8317.vercel.app/api",
+    origin: "*", // Allows all urls
     methods: ["GET", "POST"],
     credentials: true,
   })
