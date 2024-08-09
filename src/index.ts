@@ -16,7 +16,7 @@ const server = new ApolloServer({
 
 server.start().then(() => {
   app.use(
-    "/playground",
+    "/api",
     cors<cors.CorsRequest>(),
     express.json(),
     expressMiddleware(server, {
@@ -31,8 +31,6 @@ server.start().then(() => {
   const PORT = process.env.PORT || 4500;
 
   app.listen(PORT, () => {
-    console.log(
-      `Server is running on http://localhost:${PORT}/playground`
-    );
+    console.log(`Server is running on http://localhost:${PORT}/api`);
   });
 });
