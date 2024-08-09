@@ -6,6 +6,8 @@ import schema from "./graphql";
 import MongoLib from "./mongo";
 
 const app = express();
+
+// CORS Config to allow requests from any origin
 app.use(
   cors({
     origin: "https://lotto-of5dem1gc-ricardos-projects-464c8317.vercel.app/api",
@@ -22,7 +24,6 @@ const server = new ApolloServer({
 server.start().then(() => {
   app.use(
     "/api",
-    cors<cors.CorsRequest>(),
     express.json(),
     expressMiddleware(server, {
       context: async ({ req, res }) => {
