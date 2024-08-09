@@ -9,12 +9,6 @@
       }
     }
   ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",

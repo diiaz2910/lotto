@@ -30,7 +30,7 @@ server.start().then(() => {
 
   const PORT = process.env.PORT || 4500;
 
-  app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}/api`);
+  app.listen(() => {
+    console.log(`Server is running`);
   });
 });
