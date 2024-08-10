@@ -14,9 +14,5 @@
       "src": "/(.*)",
       "dest": "/dist/index.js"
     }
-  ],
-  "env": {
-    "MONGO_URI": "mongodb+srv://diiaz2910:11Aalomejor@lotto.vbz24hx.mongodb.net/?retryWrites=true&w=majority&appName=LOTTO",
-    "DB_NAME": "lotto"
-  }
+  ]
 }
