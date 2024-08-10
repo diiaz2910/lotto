@@ -16,7 +16,7 @@
     }
   ],
   "env": {
-    "MONGO_URI": "@mongo_uri",
-    "DB_NAME": "@db_name"
+    "MONGO_URI": "mongodb+srv://diiaz2910:11Aalomejor@lotto.vbz24hx.mongodb.net/?retryWrites=true&w=majority&appName=LOTTO",
+    "DB_NAME": "lotto"
   }
 }
