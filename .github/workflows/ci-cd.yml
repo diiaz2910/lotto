@@ -30,4 +30,4 @@ jobs:
         run: npm run build
 
       - name: Deploy to Vercel
-        run: npx vercel --prod --confirm --scope=diiaz2910
+        run: npx vercel --prod --confirm
