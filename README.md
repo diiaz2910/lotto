@@ -6,7 +6,7 @@
   <img src="https://github.com/diiaz2910/assets-repo/blob/master/png-transparent-google-colab-logo-tech-companies-removebg-preview.png?raw=true" width="140">
   <h1>Lotto Project
    </h1>
-  https://lotto-dusky-one.vercel.app/api
+  <h2>https://lotto-dusky-one.vercel.app/api </h2><br/>
   <p>This Lotto project aims to display statistics about numbers in the New Zealand lottery game. It will present numbers and statistics obtained from Google Colab and display them on both web and mobile applications. The app is designed to be updated every time a game is played, ensuring that the data and statistics remain current. A copy of historical results is stored in a MongoDB database, and the data will be continuously modeled.
 
 
@@ -42,11 +42,21 @@ Evualuating best way to present charts and tables with search and sort.
 <p>Then, install the dependencies using npm:</p>
 <pre><code class="language-bash">npm install
 </code></pre>
+
+
+<h2 id="graphql">GraphQL Queries</h2>
+<pre><code class="language-bash"><li>getBonuses, getLastBonus</li>
+<li>getCombinations, getLastCombination</li>
+
+<li>getPowerBalls, getLastPowerBall</li>
+<li>getStrikes, getLastStrike</li>
+</code></pre>
+
 <h2 id="usage">Usage</h2>
 <p>To run the project locally, use the following command:</p>
 <pre><code class="language-bash">npm run dev
 </code></pre>
-<p>This will start the application in development mode. Open <a href="http://localhost:4500/playground">http://localhost:4500</a> to view it in your browser.</p>
+<p>This will start the application in development mode. Open <a href="http://localhost:4500/api">http://localhost:4500/api</a> to view it in your browser.</p>
 <h2 id="contribution">Contribution</h2>
 <p>If you want to contribute to this project, follow these steps:</p>
 <ul>
@@ -56,16 +66,9 @@ Evualuating best way to present charts and tables with search and sort.
 <li>Push to the branch: <code>git push origin feature/FeatureName</code>.</li>
 <li>Open a pull request on GitHub.</li>
 </ul>
-<h2 id="project-structure">Project Structure (will update periodically)</h2>
-<p>Description of the project&#39;s file and folder structure.</p>
-<pre><code class="language-java">.
-To be posted
+<h2 id="project-structure">section</h2>
+<p>section</p>
+<pre><code class="language-java">
+section
 </code></pre>
-<h2 id="dependencies">Dependencies</h2>
-<p>List of the main project dependencies and their function:</p>
-<ul>
-<li><strong>React:</strong> JavaScript library for building user interfaces.</li>
-<li><strong>React Router:</strong> Router for React applications.</li>
-<li><strong>TypeScript:</strong> Typed superset of JavaScript.</li>
-</ul>
 
