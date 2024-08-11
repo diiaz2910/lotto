@@ -4,8 +4,11 @@
   <img src="https://github.com/diiaz2910/assets-repo/blob/master/mongodb-logo-D13D67C930-seeklogo.com.png?raw=true" width="120"><br />
   <img src="https://github.com/diiaz2910/assets-repo/blob/master/png-transparent-js-logo-node-logos-and-brands-icon-removebg-preview.png?raw=true" width="90">
   <img src="https://github.com/diiaz2910/assets-repo/blob/master/png-transparent-google-colab-logo-tech-companies-removebg-preview.png?raw=true" width="140">
-  <h1>Lotto Project</h1>
+  <h1>Lotto Project
+   </h1>
+  <h2>https://lotto-dusky-one.vercel.app/api</h2>
   <p>This Lotto project aims to display statistics about numbers in the New Zealand lottery game. It will present numbers and statistics obtained from Google Colab and display them on both web and mobile applications. The app is designed to be updated every time a game is played, ensuring that the data and statistics remain current. A copy of historical results is stored in a MongoDB database, and the data will be continuously modeled.
+
 
 </p>
 </div>
