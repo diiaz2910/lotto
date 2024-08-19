@@ -4,6 +4,7 @@ type Chart {
   description: String!
   index: Int!
   getLastChart: Chart
+  name: String
 }
 
 type Query {
