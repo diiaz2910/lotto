@@ -18,7 +18,7 @@ const resolversChart: IResolvers = {
       try {
         return await context.db
           .collection(CHART_COLLECTION)
-          .findOne({}, { sort: { index: -1 } });
+          .findOne({ name: args.name }, { sort: { index: -1 } });
       } catch (error) {
         console.error(error);
         throw error;
