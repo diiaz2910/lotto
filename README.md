@@ -15,7 +15,7 @@
 
 ### 
 <li>This project will hopefully shows coincidences between more than 1200 past games against sequences, and against Simple Consecutive Sequences:
-Consecutive numbers, such as 1, 2, 3, 4, 5 or 35, 36, 37, 38, 39.</li>
+Consecutive numbers, such as: 1, 2, 3, 4, 5 or 35, 36, 37, 38, 39.</li>
 <li>
 Constant Increment Sequences:
 Numbers with a fixed increment between them, such as 2, 4, 6, 8, 10 (increment of 2) or 5, 10, 15, 20, 25 (increment of 5).</li>
