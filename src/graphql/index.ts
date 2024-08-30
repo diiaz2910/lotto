@@ -8,6 +8,7 @@ import lottoTypeDefs from "./schemas/lotto.graphql";
 import powerBallTypeDefs from "./schemas/powerBall.graphql";
 import strikeTypeDefs from "./schemas/strike.graphql";
 import chartTypDefs from "./schemas/chart.graphql";
+import simulationTypeDefs from "./schemas/simulations.graphql";
 
 //Resolvers
 import resolversBonus from "./resolvers/resolversBonus";
@@ -15,6 +16,7 @@ import resolversLotto from "./resolvers/resolverLotto";
 import resolversPowerBall from "./resolvers/resolverPowerBall";
 import resolversStrike from "./resolvers/resolverStrike";
 import resolversChart from "./resolvers/resolverChart";
+import resolversSimulation from "./resolvers/resolverSimulations";
 
 const schema: GraphQLSchema = mergeSchemas({
   typeDefs: [
@@ -23,6 +25,7 @@ const schema: GraphQLSchema = mergeSchemas({
     powerBallTypeDefs,
     strikeTypeDefs,
     chartTypDefs,
+    simulationTypeDefs,
   ],
   resolvers: [
     resolversBonus,
@@ -30,6 +33,7 @@ const schema: GraphQLSchema = mergeSchemas({
     resolversPowerBall,
     resolversStrike,
     resolversChart,
+    resolversSimulation,
   ],
 });
 
