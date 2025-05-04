@@ -1,0 +1,9 @@
+type Query {
+  getSimulations: [Simulation]
+}
+
+type Simulation {
+  _id: ID
+  numbers: [Int]
+  method: String
+}
